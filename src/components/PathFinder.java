@@ -66,12 +66,12 @@ public class PathFinder {
 						return finalDirections;
 					}
 				}
-				// (x + i) % 4 WHERE 5 <= x <= 7
+				// (x + i) % 4 WHERE 1 <= x <= 3
 				else if (maze[d[i].y][d[i].x].componentType == TRAIL
 						&& maze[d[i].y][d[i].x].componentType != WRONGPATH
-						&& (!d[(5 + i) % 4].isInBounds || maze[d[(5 + i) % 4].y][d[(5 + i) % 4].x].componentType != PATH)
-						&& (!d[(6 + i) % 4].isInBounds || maze[d[(6 + i) % 4].y][d[(6 + i) % 4].x].componentType != PATH)
-						&& (!d[(7 + i) % 4].isInBounds || maze[d[(7 + i) % 4].y][d[(7 + i) % 4].x].componentType != PATH)) {
+						&& (!d[(1 + i) % 4].isInBounds || maze[d[(1 + i) % 4].y][d[(1 + i) % 4].x].componentType != PATH)
+						&& (!d[(2 + i) % 4].isInBounds || maze[d[(2 + i) % 4].y][d[(2 + i) % 4].x].componentType != PATH)
+						&& (!d[(3 + i) % 4].isInBounds || maze[d[(3 + i) % 4].y][d[(3 + i) % 4].x].componentType != PATH)) {
 					finalDirections = new ArrayList<Integer>();
 					finalDirections.add(WRONGPATH);
 					MazeButton[][] mazeCopy = maze;
